@@ -81,6 +81,9 @@ DATABASES = {
         'NAME':'tribune' ,
         'USER':'moringaschool',
         'PASSWORD':'joe',
+        # 'TEST': {
+        #     'NAME':'test_tribune'
+        # }
     }
 }
 
