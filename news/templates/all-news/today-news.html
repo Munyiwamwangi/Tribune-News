@@ -8,9 +8,9 @@
     {% for news_item in news %}
     <div class="row">
         <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
-            <h2 class="text-center">{{ news_item.title }}</h2>
+            <h5 style="font-size: 15px" class="text-center hd">{{ news_item.title }}</h5>
         
-            <h4 class="text-left">{{ news_item.post}}</h4>
+            <h4 style="font-style: italic; font-size: 13px;" class="text-left hb">{{ news_item.post}}</h4>
         </div>
         <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
             <img src="{{ news_item.article_image.url}}" class="img-responsive" alt="Image">
@@ -20,7 +20,7 @@
 
     {% empty %}
     <div class="row">
-        <h2 class="text-center"> There are No News Items</h2>
+        <h5 class="text-center hd"> There are No News Items</h5>
     </div>
     {% endfor %}
 </div>

@@ -1,3 +1,15 @@
-h1{
+h5{
 	color:green;
+}
+
+.hd{
+	font-style: bold;
+	font-size: 18px;
+	font-family: sans-serif;
+}
+
+.hd{
+	font-style: italic;
+	font-family: serif;
+	font-size: 11px;
 }
