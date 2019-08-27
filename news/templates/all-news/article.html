@@ -1,25 +1,23 @@
-{%extends 'all-news/base.html'%}
+    {% extends 'all-news/base.html' %}
+    {% block content %}
 
- {% block content %}
+    <div class="container">
 
- <div class="container">
+     <div class="row">
+       <img src="{{article.article_image.url}}"  class="img-responsive" alt="">
+     </div>
 
-   <div class="row">
-     <img src="{{article.article_image.url}}"  class="img-responsive" alt="">
+     <div class="row">
+       <h1 style="font-style: italic;" class="text-center hd">{{article.title}}</h1>
+     </div>
+
+     <div class="row hb">
+       <p style="font-style: italic;">{{article.post}}</p>
+     </div>
+
+     <div class="row hbs">
+       <p>Posted {{article.pub_date|timesince}} ago by {{article.editor.first_name}}</p>
+     </div>
+
    </div>
-
-   <div class="row">
-     <h1 style="font-style: italic;" class="text-center hd">{{article.title}}</h1>
-   </div>
-
-   <div class="row hb">
-     <p style="font-style: italic;">{{article.post}}</p>
-   </div>
-
-   <div class="row hbs">
-     <p>Posted {{article.pub_date|timesince}} ago by {{article.editor.first_name}}</p>
-   </div>
-
- </div>
-
- {% endblock %}
+   {% endblock %}

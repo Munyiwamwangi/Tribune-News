@@ -1,5 +1,5 @@
 {% extends 'all-news/base.html' %}
-
+{% load bootstrap %}
 {% block content %}
 {{block.super}}
 
@@ -23,5 +23,12 @@
         <h5 class="text-center hd"> There are No News Items</h5>
     </div>
     {% endfor %}
+    <div class="container-fluid">
+        <form action="{% url 'newsToday' %} " method="post">
+            {% csrf_token %}
+            {% bootstrao_form letterForm layout = 'inline' %}
+            <input type="submit" value="Subscribe" name="">
+        </form>        
+    </div>
 </div>
 {% endblock %}
