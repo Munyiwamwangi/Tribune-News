@@ -1,5 +1,5 @@
 {% extends 'all-news/base.html' %}
-{% load bootstrap %}
+{% load bootstrap3 %}
 {% block content %}
 {{block.super}}
 
@@ -26,7 +26,7 @@
     <div class="container-fluid">
         <form action="{% url 'newsToday' %} " method="post">
             {% csrf_token %}
-            {% bootstrao_form letterForm layout = 'inline' %}
+             {% bootstrap_form letterForm layout='inline' %}
             <input type="submit" value="Subscribe" name="">
         </form>        
     </div>
