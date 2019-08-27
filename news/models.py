@@ -33,7 +33,8 @@ class Tags(models.Model):
 class Article(models.Model):
     title = models.CharField(max_length=60)
     post = HTMLField()
-    editor = models.ForeignKey(User,on_delete=models.CASCADE)
+    editor = models.ForeignKey(User,
+        on_delete = models.CASCADE)
     tags = models.ManyToManyField(Tags)
     pub_date = models.DateTimeField(auto_now_add=True)
     article_image = models.ImageField(upload_to='articles/', blank=True)
