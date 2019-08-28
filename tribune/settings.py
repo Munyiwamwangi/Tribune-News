@@ -65,6 +65,7 @@ MIDDLEWARE = [
 ]
 
 ROOT_URLCONF = 'tribune.urls'
+LOGIN_REDIRECT_URL = ("/")
 
 TEMPLATES = [
     {
