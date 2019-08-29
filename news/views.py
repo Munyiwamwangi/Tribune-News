@@ -95,3 +95,4 @@ def new_article(request):
     else:
         form = NewArticleForm()
     return render(request, 'new-article.html', {"form": form})
+
