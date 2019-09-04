@@ -11,28 +11,25 @@
 
 	{% block styles %} {% bootstrap_css %}
 	<link rel="stylesheet" href="{% static 'css/basenews.css' %}"> {% endblock %}
-
 </head>
-
 <body>
 	<div class="row">
 		<!-- empty  -->
-	<div class="col-md-3 sol-sm-3">
-	
-	</div>
+		<div class="col-md-3 sol-sm-3"></div>
+		<!-- empty div -->
 
-	<div class="col-md-6 sol-sm-6">
-		<form  action="{%url 'new-article'%}" method="post" enctype="multipart/form-data">
-		{%csrf_token%}
+		<div class="col-md-6 sol-sm-6">
+			<form  action="{%url 'new-article'%}" method="post" enctype="multipart/form-data">
+				{%csrf_token%}
 
-		{% bootstrap_form form%}
-		<input type="submit" class="btn btn-success btn-lg" value="Post">
-	</form>
-	</div>
-
-	<div class="col-md-3">
-	
-	</div>
+				{% bootstrap_form form%}
+				<input type="submit" class="btn btn-success btn-lg" value="Post">
+			</form>
+		</div>
+		<!-- empty div -->
+		<div class="col-md-3">
+			<!-- empty div -->
+		</div>
 	</div>
 
 	{% block scripts %}
