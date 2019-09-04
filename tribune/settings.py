@@ -44,6 +44,7 @@ ALLOWED_HOSTS = ['*']
 INSTALLED_APPS = [
     'tinymce',
     'bootstrap3',
+    'rest_framework',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
