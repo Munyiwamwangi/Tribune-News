@@ -69,6 +69,14 @@ MIDDLEWARE = [
 ROOT_URLCONF = 'tribune.urls'
 LOGIN_REDIRECT_URL = ("/")
 
+# API CONF
+REST_FRAMEWORK = {
+    'DEFAULT_AUTHENTICATION_CLASSES': (
+        'rest_framework.authentication.TokenAuthentication',
+    )
+}
+# API CONF
+
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
