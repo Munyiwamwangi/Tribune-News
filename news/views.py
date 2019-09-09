@@ -22,7 +22,8 @@ def welcome(request):
 
 def news_today(request):
     date = dt.date.today()
-    news = Article.todays_news()
+    # news = Article.todays_news()
+    news = Article.objects.all()
     form = NewsLetterForm()
     if request.method == 'POST':
         form = NewsLetterForm(request.POST)
